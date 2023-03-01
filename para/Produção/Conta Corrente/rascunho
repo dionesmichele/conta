@@ -246,3 +246,132 @@ public class Main {
         return conta;
     }
 }
+--------------------------------------------------------------------------------------------------------------
+import javax.swing.*;
+import java.util.ArrayList;
+
+public class MenuConta {
+    public static void main(String[] args) {
+        int op;
+        int op1;//logar
+        int op2;//criar
+        int op3;//consultar
+        int op4;//depositar
+        int op5;//sacar
+        int op6;//extrato
+
+        do {
+            op = Integer.parseInt(JOptionPane.showInputDialog(
+                    "Olá, que bom te ver por aqui!\n" +
+                            "Já é cliente nosso? \n Digite a opção desejada: \n 1- Já sou cliente \n 2- Criar conta  \n"
+                            + "(Para encerrar digite 0 a qualquer momento)"
+            ));
+
+            switch (op) {
+                case 1:
+                    JOptionPane.showInputDialog(
+                            "Insira seus dados para entrar na sua conta \n Digite seu CPF:"
+                    );
+                    //String nome = ler.next();
+                    Object cliente = null;
+                   // cliente.(nome);
+
+
+                    break;
+
+
+
+
+
+                case 2:
+                    CriarConta();
+                    break;
+                case 0:
+                    System.exit(0);
+                    break;
+
+                default:
+                    JOptionPane.showMessageDialog(null, "Opção inválida,tente novamente");
+                    break;
+            }
+
+
+        } while (op != 0);
+    }
+
+    private String nome;
+    private double renda;
+    private long cpf;
+
+    public void Cliente() {
+        this.nome = getNome();
+        double getRenda = 0;
+        this.renda = getRenda;
+        this.cpf = getCPF();
+    }
+
+    private long getCPF() {
+        return 0;
+    }
+
+    private String getNome() {
+        return null;
+    }
+
+    ArrayList<String> nomes = new ArrayList<String>();
+
+    private  void encontrarCliente(String nome) {
+       nomes.add(nome);
+    }
+
+    private static void CriarConta() {
+    }
+
+    private  void ConsultarSaldo() {
+    }
+
+    private  void RealizarDeposito() {
+    }
+
+    private  void RealizarSaque() {
+    }
+
+    private  void Extrato() {
+    }
+
+}
+
+
+// USAR RAMDON PARA NUM CONTA
+//
+// if (op1 == 1)
+//         EncontrarCliente();
+//         else if (op1 == 2)
+//         CriarConta();
+//         else if (op1 == 0) {
+//         System.exit(0);
+//
+//         } else
+//         JOptionPane.showMessageDialog(null, "Opção inválida,tente novamente");
+
+
+//    public static void main(String[] args) throws IOException {
+//        String labelContaCorrente = "Escolha uma opção para a operação desejada";
+//        System.out.println(labelContaCorrente);
+//        char operacao = (char) System.in.read();
+//        System.out.println(operacao);
+//        if (operacao == '1') {
+//            Main.criarConta();
+//
+//        }
+//    }
+//
+//    public static void criarConta() {
+//        String labelContaCriada = "Conta criada com sucesso";
+//        System.out.println(labelContaCriada);
+//    }
+//}
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
