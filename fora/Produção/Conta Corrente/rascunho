@@ -1,0 +1,248 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Main {
+    static Scanner input = new Scanner(System.in);
+    static ArrayList<Conta> contasBancarias;
+
+    public static void main(String[] args) {
+        contasBancarias = new ArrayList<Conta>();
+        operacoes();
+    }
+
+    public static void operacoes() {
+
+        System.out.println("-------------------------------------------------------");
+        System.out.println("-------------Olá, que bom te ver por aqui!-------------");
+        System.out.println("-------------------------------------------------------");
+        System.out.println("*** Já é cliente nosso? \n  Digite a opção desejada:***");
+        System.out.println("-------------------------------------------------------");
+        System.out.println("|                  1 - Criar conta                    |");
+        System.out.println("|                  2 - Já possuo conta                |");
+        System.out.println("|    (Para encerrar digite 0 a qualquer momento)      |");
+
+        int operacao = input.nextInt();
+        ;
+
+        switch (operacao) {
+            case 1:
+                criarConta();
+                break;
+
+            case 2:
+                encontrarConta();
+                break;
+
+            case 0:
+                System.exit(0);
+                break;
+
+            default:
+                System.out.println("Opção inválida!");
+                operacoes();
+                break;
+        }
+
+    }
+
+
+    private static void criarConta() {
+        System.out.println("\nNome: ");
+        String nome = input.next();
+
+        System.out.println("\nCPF: ");
+        String cpf = input.next();
+
+        System.out.println("Renda: ");
+        String renda = input.next();
+
+        Pessoa cliente = new Pessoa(nome, cpf, renda);
+
+        Conta conta = new Conta(cliente);
+
+        contasBancarias.add(conta);
+        System.out.println("--- Sua conta foi criada com sucesso! ---");
+
+        operacoes();
+
+    }
+
+    private static Conta encontrarConta() {
+        Conta conta = null;
+        if (contasBancarias.size() > 0) {
+            for (Conta contaa : contasBancarias) {
+                long numeroConta = 0;
+                if (contaa.getNumeroConta() == numeroConta) {
+                    conta = contaa;
+                }
+            }
+        }
+        return conta;
+    }
+}
+----------------------------------------------------------------------------------------------------------
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Main {
+    static Scanner input = new Scanner(System.in);
+    static ArrayList<Conta> contasBancarias;
+
+    public static void main(String[] args) {
+        contasBancarias = new ArrayList<Conta>();
+        operacoes();
+    }
+
+    public static void operacoes() {
+
+        System.out.println("-------------------------------------------------------");
+        System.out.println("-------------Olá, que bom te ver por aqui!-------------");
+        System.out.println("-------------------------------------------------------");
+        System.out.println("*** Já é cliente nosso? \n  Digite a opção desejada:***");
+        System.out.println("-------------------------------------------------------");
+        System.out.println("|                  1 - Criar conta                    |");
+        System.out.println("|                  2 - Já possuo conta                |");
+        System.out.println("|    (Para encerrar digite 0 a qualquer momento)      |");
+
+        int operacao = input.nextInt();
+        ;
+
+        switch (operacao) {
+            case 1:
+                criarConta();
+                break;
+
+            case 2:
+                encontrarConta();
+                break;
+
+            case 0:
+                System.exit(0);
+                break;
+
+            default:
+                System.out.println("Opção inválida!");
+                operacoes();
+                break;
+        }
+
+    }
+
+
+    private static void criarConta() {
+        System.out.println("\nNome: ");
+        String nome = input.next();
+
+        System.out.println("\nCPF: ");
+        String cpf = input.next();
+
+        System.out.println("Renda: ");
+        String renda = input.next();
+
+        Pessoa cliente = new Pessoa(nome, cpf, renda);
+
+        Conta conta = new Conta(cliente);
+
+        contasBancarias.add(conta);
+        System.out.println("--- Sua conta foi criada com sucesso! ---");
+
+        operacoes();
+
+    }
+
+    private static Conta encontrarConta() {
+        Conta conta = null;
+        if (contasBancarias.size() > 0) {
+            for (Conta contaa : contasBancarias) {
+                long numeroConta = 0;
+                if (contaa.getNumeroConta() == numeroConta) {
+                    conta = contaa;
+                }
+            }
+        }
+        return conta;
+    }
+}
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Main {
+    static Scanner input = new Scanner(System.in);
+    static ArrayList<Conta> contasBancarias;
+
+    public static void main(String[] args) {
+        contasBancarias = new ArrayList<Conta>();
+        operacoes();
+    }
+
+    public static void operacoes() {
+
+        System.out.println("-------------------------------------------------------");
+        System.out.println("-------------Olá, que bom te ver por aqui!-------------");
+        System.out.println("-------------------------------------------------------");
+        System.out.println("*** Já é cliente nosso? \n  Digite a opção desejada:***");
+        System.out.println("-------------------------------------------------------");
+        System.out.println("|                  1 - Criar conta                    |");
+        System.out.println("|                  2 - Já possuo conta                |");
+        System.out.println("|    (Para encerrar digite 0 a qualquer momento)      |");
+
+        int operacao = input.nextInt();
+        ;
+
+        switch (operacao) {
+            case 1:
+                criarConta();
+                break;
+
+            case 2:
+                encontrarConta();
+                break;
+
+            case 0:
+                System.exit(0);
+                break;
+
+            default:
+                System.out.println("Opção inválida!");
+                operacoes();
+                break;
+        }
+
+    }
+
+
+    private static void criarConta() {
+        System.out.println("\nNome: ");
+        String nome = input.next();
+
+        System.out.println("\nCPF: ");
+        String cpf = input.next();
+
+        System.out.println("Renda: ");
+        String renda = input.next();
+
+        Pessoa cliente = new Pessoa(nome, cpf, renda);
+
+        Conta conta = new Conta(cliente);
+
+        contasBancarias.add(conta);
+        System.out.println("--- Sua conta foi criada com sucesso! ---");
+
+        operacoes();
+
+    }
+
+    private static Conta encontrarConta() {
+        Conta conta = null;
+        if (contasBancarias.size() > 0) {
+            for (Conta contaa : contasBancarias) {
+                long numeroConta = 0;
+                if (contaa.getNumeroConta() == numeroConta) {
+                    conta = contaa;
+                }
+            }
+        }
+        return conta;
+    }
+}
